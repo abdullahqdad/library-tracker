@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 max-w-4xl mx-auto dark:bg-gray-900 dark:text-gray-200">
       {/* Header Section */}
       <header className="mb-8 text-center">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
@@ -32,7 +32,7 @@ export default function AboutUs() {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4">Meet the Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center">
+          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center dark:bg-gray-800 dark:border-gray-700">
             <Image
               src="/assets/1.jpg"
               alt="Team Member 1"
@@ -41,9 +41,9 @@ export default function AboutUs() {
               height={200}
             />
             <h3 className="text-xl font-bold">Jane Doe</h3>
-            <p className="text-gray-600">Founder & CEO</p>
+            <p className="text-gray-600 dark:text-gray-400">Founder & CEO</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center">
+          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center dark:bg-gray-800 dark:border-gray-700">
             <Image
               src="/assets/2.jpg"
               alt="Team Member 2"
@@ -52,9 +52,9 @@ export default function AboutUs() {
               height={200}
             />
             <h3 className="text-xl font-bold">John Smith</h3>
-            <p className="text-gray-600">Lead Developer</p>
+            <p className="text-gray-600 dark:text-gray-400">Lead Developer</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center">
+          <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 text-center dark:bg-gray-800 dark:border-gray-700">
             <Image
               src="/assets/3.jpg"
               alt="Team Member 3"
@@ -63,7 +63,7 @@ export default function AboutUs() {
               height={200}
             />
             <h3 className="text-xl font-bold">Emily Johnson</h3>
-            <p className="text-gray-600">UX Designer</p>
+            <p className="text-gray-600 dark:text-gray-400">UX Designer</p>
           </div>
         </div>
       </section>
