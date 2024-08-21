@@ -33,12 +33,12 @@ export default function MainForm({ books, setBooks }) {
       <div className="w-full max-w-md">
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-6 rounded-lg shadow-md"
+          className="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200"
         >
           <div className="mb-4">
             <label
               htmlFor="title"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-700 font-medium mb-2 dark:text-gray-300"
             >
               Book Title
             </label>
@@ -46,7 +46,7 @@ export default function MainForm({ books, setBooks }) {
               type="text"
               id="title"
               name="title"
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
               placeholder="Enter the title of the book"
             />
           </div>
@@ -54,7 +54,7 @@ export default function MainForm({ books, setBooks }) {
           <div className="mb-4">
             <label
               htmlFor="author"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-700 font-medium mb-2 dark:text-gray-300"
             >
               Author
             </label>
@@ -62,7 +62,7 @@ export default function MainForm({ books, setBooks }) {
               type="text"
               id="author"
               name="author"
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
               placeholder="Enter the author's name"
             />
           </div>
@@ -70,7 +70,7 @@ export default function MainForm({ books, setBooks }) {
           <div className="mb-4">
             <label
               htmlFor="genre"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-700 font-medium mb-2 dark:text-gray-300"
             >
               Genre
             </label>
@@ -78,7 +78,7 @@ export default function MainForm({ books, setBooks }) {
               type="text"
               id="genre"
               name="genre"
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
               placeholder="Enter the book's genre"
             />
           </div>
@@ -86,7 +86,7 @@ export default function MainForm({ books, setBooks }) {
           <div className="mb-4">
             <label
               htmlFor="publicationDate"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-700 font-medium mb-2 dark:text-gray-300"
             >
               Publication Date
             </label>
@@ -94,14 +94,14 @@ export default function MainForm({ books, setBooks }) {
               type="date"
               id="publicationDate"
               name="publicationDate"
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
             />
           </div>
 
           <div className="mb-4">
             <label
               htmlFor="description"
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-gray-700 font-medium mb-2 dark:text-gray-300"
             >
               Description
             </label>
@@ -109,14 +109,14 @@ export default function MainForm({ books, setBooks }) {
               id="description"
               name="description"
               rows="4"
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
               placeholder="Enter a brief description of the book"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition-colors"
+            className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
           >
             Add Book
           </button>
