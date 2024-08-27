@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth";
 export default function Header() {
   const { light, toggleThemeHandler } = useContext(ThemeContext);
   const { tokens, logout } = useContext(AuthContext);
-  const username = tokens?.user?.username || "Guest"; // Adjust according to your token structure
+  const username = tokens ? tokens.username : 'Guest'; // Adjust according to your token structure
 
   return (
     <header className="p-4 bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200">
@@ -27,6 +27,14 @@ export default function Header() {
                 className="text-white hover:text-gray-300 dark:text-gray-200 dark:hover:text-gray-400 transition-colors"
               >
                 About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cars"
+                className="text-white hover:text-gray-300 dark:text-gray-200 dark:hover:text-gray-400 transition-colors"
+              >
+                Cars
               </a>
             </li>
           </ul>

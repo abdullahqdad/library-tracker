@@ -1,20 +1,32 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/auth";
 
 export default function LoginForm() {
   const { login } = useContext(AuthContext);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const username = e.target.username.value;
     const password = e.target.password.value;
-    await login({ username, password });
+
+    const success = await login({ username, password });
+    if (!success) {
+      setError("Incorrect username or password. Please try again.");
+    } else {
+      setError(null); // Clear any previous errors on successful login
+    }
   };
 
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-full max-w-md">
         <form className="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200" onSubmit={handleSubmit}>
+          {error && (
+            <div className="mb-4 text-red-500 text-sm">
+              {error}
+            </div>
+          )}
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-700 font-medium mb-2 dark:text-gray-300">
               Username

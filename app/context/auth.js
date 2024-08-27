@@ -25,8 +25,10 @@ export default function AuthWrapper({ children }) {
       if (typeof window !== "undefined") {
         localStorage.setItem("tokens", JSON.stringify(newTokens));
       }
+      return true; // Login successful
     } catch (error) {
       console.error("Login failed", error);
+      return false; // Login failed
     }
   }
 
