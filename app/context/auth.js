@@ -18,7 +18,7 @@ export default function AuthWrapper({ children }) {
 
   async function login(info) {
     try {
-      const url = process.env.NEXT_PUBLIC_URL + 'api/token/';
+      const url = 'https://be-cars-django.onrender.com/api/token/';
       const res = await axios.post(url, info);
       const newTokens = res.data;
       setTokens(newTokens);
