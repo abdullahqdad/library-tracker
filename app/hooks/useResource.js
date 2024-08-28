@@ -21,7 +21,7 @@ async function fetchResource([url, tokens], config) {
 
 // useResource hook
 export default function useResource() {
-    const URL = 'http://localhost:8000/api/cars/';
+    const URL = process.env.NEXT_PUBLIC_URL +'api/cars/';
     const { tokens, logout } = useContext(AuthContext);
 
     function config(method = 'GET', body = null) {
