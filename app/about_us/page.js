@@ -24,7 +24,7 @@ export default function AboutUs() {
           />
         </div>
         <p className="mt-4 text-lg">
-          Our application allows you to track your books, categorize them by genre, and keep detailed records of your reading history. Designed for book enthusiasts of all kinds, our app provides a user-friendly interface to enhance your reading experience.
+          allows you to track your books, categorize them by genre, and keep detailed records of your reading history. Designed for book enthusiasts of all kinds, our app provides a user-friendly interface to enhance your reading experience.
         </p>
       </section>
 
